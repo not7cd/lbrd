@@ -18,6 +18,10 @@ var rootCmd = &cobra.Command{
 	},
 }
 
+func Init() {
+	rootCmd.AddCommand(listLeaderBoardCmd)
+}
+
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
